@@ -1,0 +1,156 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+/* Mixin */
+@mixin size($width: 400px, $height: 40px) {
+  width: $width;
+  height: $height;
+}
+
+/* Body Styles */
+body {
+  background-color: #fff5ee;
+}
+
+/* New Item Label Styles */
+.new-item-label {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5em;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+
+  /* New Item Input Styles */
+  #newItem {
+    @include size();
+    text-align: center;
+
+    &:hover {
+      white-space: nowrap;
+    }
+  }
+}
+
+/* Add Button Styles */
+.add-button {
+  @include size($width: 405px);
+  border: 0.5px solid gray;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: #494f55a1 !important;
+    color: white;
+  }
+}
+
+/* Container Styles */
+.container {
+  display: flex;
+  margin-top: 5px;
+  justify-content: center;
+}
+
+/* Todo List Styles */
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Todo List Items Styles */
+  ul {
+    @include size($width: 300px, $height: auto);
+  }
+
+  /* Todo List Item Styles */
+  li {
+    list-style: none;
+    padding-bottom: 5px;
+  }
+
+  /* New Todo Styles */
+  .newtodo {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+/* Delete Button Styles */
+.delete-button {
+  @include size($width: 50px, $height: 15px);
+  font-size: 11px;
+  text-align: center;
+  color: #000000;
+  background-color: #ff8888;
+  border: 1px solid #ff4444;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: #ff4444;
+    color: white;
+  }
+}
+
+/* Input Styles */
+input[type="text"] {
+  padding: 8px 12px;
+  font-size: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    border-color: #666;
+    outline: none;
+  }
+}
+
+/* Button and Delete Button Shared Styles */
+.add-button,
+.delete-button {
+  cursor: pointer;
+}
+
+/* Button and Delete Button Focus Styles */
+.add-button:focus,
+.delete-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Adjust color as desired */
+}
+
+/* Additional Styles */
+.todo-list-header {
+  padding-bottom: 10px;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-input {
+  margin-right: 8px;
+}
+
+.todo-list-item {
+  margin: 0;
+  padding: 0;
+}
+.todo-list-item {
+  margin: 0;
+  padding: 0;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+
